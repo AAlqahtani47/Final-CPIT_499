@@ -1,14 +1,13 @@
-﻿namespace SeniorProject.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SeniorProject.Models
 {
     public class Course
     {
-        public int Id { get; set; }
-        public int Code { get; set; }
-        public string Name { get; set; }
-        public List<Topics> Topics { get; set; }
-        public ArticulationMatrix ArticulationMatrix { get; set; }
-        public List<Sections> Sections { get; set; }
-        public int Credit { get; set; }
-
+        [Key]
+        public int course_Id { get; set; }
+        public string course_Title { get; set; }
+        public string course_Code { get; set; }
+       
     }
 }

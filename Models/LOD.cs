@@ -1,9 +1,13 @@
-﻿namespace SeniorProject.Models
+﻿
+using System.ComponentModel.DataAnnotations;
+
+namespace SeniorProject.Models
 {
     public class LOD
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
+        [Key]
+        public int LOD_Id { get; set; }
+        public string LOD_Name { get; set; }
+        public string LOD_Description { get; set; }
     }
 }
