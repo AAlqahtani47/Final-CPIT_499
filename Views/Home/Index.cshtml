@@ -1,4 +1,6 @@
 ﻿@using SeniorProject.Models;
+@model SeniorProject.ViewModels.DisplayCourses.DisplayCoursesListViewModel;
+
 @{
     ViewData["Title"] = "Home Page";
     var member = (FacultyMembers)ViewData["thisdata"];
@@ -6,13 +8,24 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome @member.Name</h1>
-    <p></p>
-    
 </div>
+<hr />
+&nbsp;
 
-<style type="text/css">
-    body {
-        background-image: url('content/Images/Dashboard_Login.jpg');
-        margin: 0;
-    }
-</style>
+<form class="row g-3">
+    <h3>Your Courses</h3> 
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header">CPIT 499</div>
+        <div class="card-body">
+            <h5 class="card-title">Senior Project 2</h5>
+            <p> &nbsp;</p>
+            <div style="text-align:right;">
+                <a href="#" class="btn btn-primary">View Course</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12" style="text-align:right;">
+        <p>&nbsp;</p>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>
